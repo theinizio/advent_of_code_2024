@@ -34,10 +34,7 @@ const updatesStr = `75,47,61,53,29
 
 const rules = rulesStr.split("\n");
 
-// console.log(rules[rules.length - 1]);
-
 const updates = updatesStr.split("\n").map((line) => line.split(","));
-console.log(updates[updates.length-1]);
 
 const isUpdateValid = update => {
   const copy = [...update];
@@ -48,8 +45,6 @@ const isUpdateValid = update => {
     const b = copy[i + 1];
 
     const str = b + "|" + a;
-
-    // console.log(a, b, rules.includes(str));
 
     if (rules.includes(str)) {
       valid = false;
